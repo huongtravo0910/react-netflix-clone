@@ -1,0 +1,60 @@
+.navbar {
+  font-size: 13.5px;
+  background-color: rgb(20, 20, 20);
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  ul {
+    flex: 1.8;
+    padding-top: 1.5rem;
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    li {
+      list-style: none;
+    }
+    padding-left: 0px;
+  }
+  img {
+    flex: 1;
+    height: 12rem;
+    width: 20rem;
+    margin-top: -2.7rem;
+    padding-left: 1rem;
+  }
+  &__secondary {
+    flex: 8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3rem;
+    &__icon {
+      padding-right: 2.5rem;
+      position: relative;
+      &__caret {
+        position: absolute;
+        margin-left: 0.5rem;
+        margin-top: 0.6rem;
+      }
+    }
+    &__kid {
+      padding-right: 2.5rem;
+      font-size: 1.5rem;
+    }
+    &__number {
+      position: absolute;
+      background-color: red;
+      color: white;
+      border-radius: 50px;
+      width: 15px;
+      height: 15px;
+      margin-right: 65px;
+      margin-top: -20px;
+      text-align: center;
+      z-index: 1;
+    }
+  }
+}
+
+
