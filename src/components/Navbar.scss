@@ -1,16 +1,17 @@
 .navbar {
-  font-size: 13.5px;
+  font-size: 1.35rem;
   background-color: rgb(20, 20, 20);
-  height: 70px;
+  height: 7rem;
   width: 100vw;
   display: flex;
-  position: relative;
+  position: fixed;
+  z-index: 2;
   ul {
     flex: 1.8;
-    padding-top: 1.5rem;
     display: flex;
     width: 15%;
     justify-content: space-between;
+    align-items: center;
     li {
       list-style: none;
     }
@@ -23,38 +24,41 @@
     margin-top: -2.7rem;
     padding-left: 1rem;
   }
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
   &__secondary {
     flex: 8;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 3rem;
-    &__icon {
-      padding-right: 2.5rem;
-      position: relative;
-      &__caret {
-        position: absolute;
-        margin-left: 0.5rem;
-        margin-top: 0.6rem;
-      }
-    }
-    &__kid {
-      padding-right: 2.5rem;
-      font-size: 1.5rem;
-    }
-    &__number {
-      position: absolute;
-      background-color: red;
-      color: white;
-      border-radius: 50px;
-      width: 15px;
-      height: 15px;
-      margin-right: 65px;
-      margin-top: -20px;
-      text-align: center;
-      z-index: 1;
-    }
+  }
+  &__icon {
+    padding-right: 2.5rem;
+    position: relative;
+  }
+  &__caret {
+    position: absolute;
+    margin-left: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  &__kid {
+    padding-right: 2.5rem;
+    font-size: 1.5rem;
+  }
+  &__number {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    margin-right: 65px;
+    margin-top: -20px;
+    text-align: center;
+    z-index: 1;
   }
 }
-
-

@@ -1,0 +1,63 @@
+.info {
+  position: absolute;
+  margin-top: -70rem;
+  color: rgb(255, 255, 255);
+  margin-left: 6.5rem;
+  width: 62rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &__intro {
+    font-size: 1.6vw;
+    font-weight: 700;
+    margin-top: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  }
+  &__wrapper {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  }
+  &__button {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__play {
+    background-color: white;
+    color: black;
+    border-radius: 0.4rem;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 13rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-left: 1.5rem;
+    }
+    cursor: pointer;
+  }
+  &__moreinfo {
+    margin-left: 2rem;
+    width: 18rem;
+    height: 5rem;
+    color: white;
+    background-color: rgba(109, 109, 110, 0.7);
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-left: 1.5rem;
+    }
+    cursor: pointer;
+  }
+}

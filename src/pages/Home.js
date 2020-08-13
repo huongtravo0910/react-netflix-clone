@@ -1,13 +1,19 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import ocean8 from "../image/Oceans-8-movie-wallpaper.jpg";
+import "../pages/home.scss";
+import Info from "../components/Info";
+import Slider from "../components/Slider"
 
-class Home extends React.Component{
-    render() {
-    return(
-        <div className="home">
-            <Navbar />            
-        </div>
-    )
-    }
+class Home extends React.Component {
+  render() {
+    return (
+      <div className="home">
+        <img src={ocean8} alt="Ocean8"></img>
+        <Info/>
+        <Slider/>
+        <div>Hello there</div>
+      </div>
+    );
+  }
 }
 export default Home;
