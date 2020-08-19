@@ -8,10 +8,11 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <img src={ocean8} alt="Ocean8"></img>
-        <Info/>
-        <Slider/>
-        <div>Hello there</div>
+         <Info/>
+        <img src={ocean8} alt="Ocean8" className="home____mainImage"></img>
+        <Slider article="Trending now"/>
+        <Slider article="Asian movies"/>
+        <div>Hello from Home</div>
       </div>
     );
   }

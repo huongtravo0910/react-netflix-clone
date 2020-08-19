@@ -2,7 +2,7 @@
   font-size: 1.35rem;
   background-color: rgb(20, 20, 20);
   height: 7rem;
-  width: 100vw;
+  width: 100%;
   display: flex;
   position: fixed;
   z-index: 2;
@@ -61,4 +61,14 @@
     text-align: center;
     z-index: 1;
   }
+}
+
+@media only screen and (max-width: 1200px) {
+.navbar {
+  font-size: calc(1.35rem/2);
+  height: calc(10rem/1.5);
+  ul{
+    display: none;
+  }
+}
 }

@@ -1,0 +1,15 @@
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  img {
+    width: 18%;
+    height: 20rem;
+    margin: 0;
+    padding: 1rem;
+    &:hover {
+      margin: 0 4rem;
+      transform: scale(1.2);
+    }
+  }
+}

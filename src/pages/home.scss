@@ -1,7 +1,10 @@
 .home {
-  color: black;
-  img {
-    width: 192rem;
+  color: white;
+  position: relative;
+  __mainImage {
+    width: 100%;
     height: auto;
+    margin-top: 0;
   }
+  overflow: hidden;
 }
