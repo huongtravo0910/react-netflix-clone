@@ -1,14 +1,12 @@
 .tile {
   position: relative;
   display: inline-block;
-  width: calc(1820px / 6);
+  width: calc(100% / 6 - 10px);
   height: 140.625px;
   margin-right: 10px;
   font-size: 20px;
   cursor: pointer;
-  -webkit-transition: 450ms all;
   transition: 450ms all;
-  -webkit-transform-origin: center right;
   transform-origin: center left;
   &:hover {
     margin: 0 0px 0 0px;
