@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import "./slider.scss";
 import ImgItems from "./ImgItems";
+import DetailedPane from "../components/DetailPane/DatailPane";
 
 export default function Slider(props) {
-  const [classNameDot0, setClassNameDot0] = useState(
-    "dotContainer__dot dotContainer__dot--active"
-  );
-  const [classNameDot1, setClassNameDot1] = useState("dotContainer__dot");
-  const [classNameDot2, setClassNameDot2] = useState("dotContainer__dot");
+  // const [classNameDot0, setClassNameDot0] = useState(
+  //   "dotContainer__dot dotContainer__dot--active"
+  // );
+  // const [classNameDot1, setClassNameDot1] = useState("dotContainer__dot");
+  // const [classNameDot2, setClassNameDot2] = useState("dotContainer__dot");
+  const [isDetailedPane, setIsDetailedPane] = useState(false);
+
+  const [dotArr, setDotArr] = useState([
+    <div className="dotContainer__dot dotContainer__dot--active"></div>,
+    <div className="dotContainer__dot"></div>,
+    <div className="dotContainer__dot"></div>,
+  ]);
   const data = [
     [
       { id: "lastOne" },
@@ -160,33 +168,80 @@ export default function Slider(props) {
       ],
     ],
   ];
-
+  let isSliding = false;
   let counter = 0;
   const left = "<";
   const right = ">";
   let rowRef = React.createRef();
 
   const goLeft = () => {
+    if (isSliding) return;
+    isSliding = true;
     setTimeout(() => {
       const size = rowRef.current.clientWidth;
       rowRef.current.style.transition = "transform 0.7s ease-in-out";
       counter--;
       rowRef.current.style.transform = "translateX(" + -size * counter + "px)";
-    }, 400);
+    }, 200);
+    if (counter === 0 || counter === 3) {
+      setDotArr([
+        <div className="dotContainer__dot dotContainer__dot--active"></div>,
+        <div className="dotContainer__dot"></div>,
+        <div className="dotContainer__dot"></div>,
+      ]);
+    }
+    if (counter === 1 || counter === 4) {
+      setDotArr([
+        <div className="dotContainer__dot"></div>,
+        <div className="dotContainer__dot dotContainer__dot--active"></div>,
+        <div className="dotContainer__dot"></div>,
+      ]);
+    }
+    if (counter === 2) {
+      setDotArr([
+        <div className="dotContainer__dot"></div>,
+        <div className="dotContainer__dot"></div>,
+        <div className="dotContainer__dot dotContainer__dot--active"></div>,
+      ]);
+    }
   };
   const goRight = () => {
+    if (isSliding) return;
+    isSliding = true;
     setTimeout(() => {
       const size = rowRef.current.clientWidth;
+      // console.log(rowRef.current.clientWidth);
       rowRef.current.style.transition = "transform 0.7s ease-in-out";
       counter++;
       rowRef.current.style.transform = "translateX(" + -size * counter + "px)";
-    }, 400);
+    }, 200);
+    // if (counter === 0 || counter === 3) {
+    //   setDotArr([
+    //     <div className="dotContainer__dot dotContainer__dot--active"></div>,
+    //     <div className="dotContainer__dot"></div>,
+    //     <div className="dotContainer__dot"></div>,
+    //   ]);
+    // }
+    // if (counter === 1 || counter === 4) {
+    //   setDotArr([
+    //     <div className="dotContainer__dot"></div>,
+    //     <div className="dotContainer__dot dotContainer__dot--active"></div>,
+    //     <div className="dotContainer__dot"></div>,
+    //   ]);
+    // }
+    // if (counter === 2) {
+    //   setDotArr([
+    //     <div className="dotContainer__dot"></div>,
+    //     <div className="dotContainer__dot"></div>,
+    //     <div className="dotContainer__dot dotContainer__dot--active"></div>,
+    //   ]);
+    // }
   };
 
   const handleTransitionEnd = () => {
-    console.log(counter);
-    console.log(data[counter][1]);
-    console.log("TransitionEnd");
+    // console.log(counter);
+    // console.log(data[counter][1]);
+    // console.log("TransitionEnd");
     if (data[counter][0]["id"] === "lastOne") {
       const size = rowRef.current.clientWidth;
       rowRef.current.style.transition = "none";
@@ -199,22 +254,26 @@ export default function Slider(props) {
       counter = data.length - counter;
       rowRef.current.style.transform = "translateX(" + -size * counter + "px)";
     }
-    console.log(counter);
-    setTimeout(() => {
-      if (data[counter][1] === 3) {
-        setClassNameDot0(" dotContainer__dot dotContainer__dot--active");
-        setClassNameDot1(" dotContainer__dot");
-        setClassNameDot2(" dotContainer__dot");
-      } else if (data[counter][1] === 1) {
-        setClassNameDot1(" dotContainer__dot dotContainer__dot--active");
-        setClassNameDot0(" dotContainer__dot");
-        setClassNameDot2(" dotContainer__dot");
-      } else if (data[counter][1] === 2) {
-        setClassNameDot2(" dotContainer__dot dotContainer__dot--active");
-        setClassNameDot0(" dotContainer__dot");
-        setClassNameDot1(" dotContainer__dot");
-      }
-    }, 400);
+
+    // setClassNameDot0("dotContainer__dot");
+    // setClassNameDot1("dotContainer__dot");
+    // setClassNameDot2("dotContainer__dot");
+    // console.log(counter);
+    // setTimeout(() => {
+    //   if (data[counter][1] === 3) {
+    //     setClassNameDot0("dotContainer__dot dotContainer__dot--active");
+    //     // setClassNameDot1("dotContainer__dot");
+    //     // setClassNameDot2("dotContainer__dot");
+    //   } else if (data[counter][1] === 1) {
+    //     setClassNameDot1("dotContainer__dot dotContainer__dot--active");
+    //     // setClassNameDot0("dotContainer__dot");
+    //     // setClassNameDot2("dotContainer__dot");
+    //   } else if (data[counter][1] === 2) {
+    //     setClassNameDot2("dotContainer__dot dotContainer__dot--active");
+    //     // setClassNameDot0("dotContainer__dot");
+    //     // setClassNameDot1("dotContainer__dot");
+    //   }
+    // }, 400);
     // setTimeout(() => {
     //   data[counter][1] === 3
     // // counter === 3 || counter ===0
@@ -229,41 +288,60 @@ export default function Slider(props) {
     //     ? setClassNameDot2(" dotContainer__dot dotContainer__dot--active")
     //     : setClassNameDot2(" dotContainer__dot");
     // }, 400);
+    isSliding = false;
+  };
+
+  const [tile, setTile] = useState("tile");
+
+  const handleClick = (a) => {
+    setIsDetailedPane(true);
+    setTile("tile1");
   };
 
   const items = data.map((item) =>
     item[2].map((image) => (
-      <ImgItems key={item[0] + image["id"]} src={image["src"]} />
+      <ImgItems
+        key={item[0] + image["id"]}
+        src={image["src"]}
+        id={image["id"]}
+       handleClick={handleClick}
+        isDetailedPane={isDetailedPane}
+        tile={tile}
+      />
     ))
   );
+        
 
   return (
-    <div className="contain">
-      <div className="dotContainer">
-        <div className={classNameDot0}></div>
-        <div className={classNameDot1}></div>
-        <div className={classNameDot2}></div>
-      </div>
-      <button className="btn btn__left" onClick={goLeft}>
-        {left}
-      </button>
+    <div>
+      <div className="contain">
+        <div className="dotContainer">
+          {dotArr[0]}
+          {dotArr[1]}
+          {dotArr[2]}
+        </div>
+        <button className="btn btn__left" onClick={goLeft}>
+          {left}
+        </button>
 
-      <button className="btn btn__right" onClick={goRight}>
-        {right}
-      </button>
-      <div className="article">
-        <h1>{props.article}</h1>
-      </div>
+        <button className="btn btn__right" onClick={goRight}>
+          {right}
+        </button>
+        <div className="article">
+          <h1>{props.article}</h1>
+        </div>
 
-      <div className="row">
-        <div
-          className="row__inner"
-          ref={rowRef}
-          onTransitionEnd={handleTransitionEnd}
-        >
-          {items}
+        <div className="row">
+          <div
+            className="row__inner"
+            ref={rowRef}
+            onTransitionEnd={handleTransitionEnd}
+          >
+            {items}
+          </div>
         </div>
       </div>
+      {isDetailedPane && <DetailedPane />}
     </div>
   );
 }
