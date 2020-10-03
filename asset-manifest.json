@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/huongtravo0910/react-netflix-clone.git/static/css/main.85c44fdf.chunk.css",
-    "main.js": "/huongtravo0910/react-netflix-clone.git/static/js/main.6e2f7ea3.chunk.js",
-    "main.js.map": "/huongtravo0910/react-netflix-clone.git/static/js/main.6e2f7ea3.chunk.js.map",
-    "runtime-main.js": "/huongtravo0910/react-netflix-clone.git/static/js/runtime-main.18e3c833.js",
-    "runtime-main.js.map": "/huongtravo0910/react-netflix-clone.git/static/js/runtime-main.18e3c833.js.map",
-    "static/js/2.e2fc4c1a.chunk.js": "/huongtravo0910/react-netflix-clone.git/static/js/2.e2fc4c1a.chunk.js",
-    "static/js/2.e2fc4c1a.chunk.js.map": "/huongtravo0910/react-netflix-clone.git/static/js/2.e2fc4c1a.chunk.js.map",
-    "index.html": "/huongtravo0910/react-netflix-clone.git/index.html",
-    "precache-manifest.18c7a50c66b06a2414c0fdfa8f216bf6.js": "/huongtravo0910/react-netflix-clone.git/precache-manifest.18c7a50c66b06a2414c0fdfa8f216bf6.js",
-    "service-worker.js": "/huongtravo0910/react-netflix-clone.git/service-worker.js",
-    "static/css/main.85c44fdf.chunk.css.map": "/huongtravo0910/react-netflix-clone.git/static/css/main.85c44fdf.chunk.css.map",
-    "static/js/2.e2fc4c1a.chunk.js.LICENSE.txt": "/huongtravo0910/react-netflix-clone.git/static/js/2.e2fc4c1a.chunk.js.LICENSE.txt",
-    "static/media/Oceans-8-movie-wallpaper.jpg": "/huongtravo0910/react-netflix-clone.git/static/media/Oceans-8-movie-wallpaper.9dfd33c9.jpg",
-    "static/media/logo-remove.png": "/huongtravo0910/react-netflix-clone.git/static/media/logo-remove.9cf134bf.png",
-    "static/media/oceans-8.jpg": "/huongtravo0910/react-netflix-clone.git/static/media/oceans-8.e87a548f.jpg"
+    "main.css": "/react-netflix-clone/static/css/main.85c44fdf.chunk.css",
+    "main.js": "/react-netflix-clone/static/js/main.eec5b6bc.chunk.js",
+    "main.js.map": "/react-netflix-clone/static/js/main.eec5b6bc.chunk.js.map",
+    "runtime-main.js": "/react-netflix-clone/static/js/runtime-main.bae1d50d.js",
+    "runtime-main.js.map": "/react-netflix-clone/static/js/runtime-main.bae1d50d.js.map",
+    "static/js/2.e2fc4c1a.chunk.js": "/react-netflix-clone/static/js/2.e2fc4c1a.chunk.js",
+    "static/js/2.e2fc4c1a.chunk.js.map": "/react-netflix-clone/static/js/2.e2fc4c1a.chunk.js.map",
+    "index.html": "/react-netflix-clone/index.html",
+    "precache-manifest.3249b3cc597ee306160ac5311f498cc8.js": "/react-netflix-clone/precache-manifest.3249b3cc597ee306160ac5311f498cc8.js",
+    "service-worker.js": "/react-netflix-clone/service-worker.js",
+    "static/css/main.85c44fdf.chunk.css.map": "/react-netflix-clone/static/css/main.85c44fdf.chunk.css.map",
+    "static/js/2.e2fc4c1a.chunk.js.LICENSE.txt": "/react-netflix-clone/static/js/2.e2fc4c1a.chunk.js.LICENSE.txt",
+    "static/media/Oceans-8-movie-wallpaper.jpg": "/react-netflix-clone/static/media/Oceans-8-movie-wallpaper.9dfd33c9.jpg",
+    "static/media/logo-remove.png": "/react-netflix-clone/static/media/logo-remove.9cf134bf.png",
+    "static/media/oceans-8.jpg": "/react-netflix-clone/static/media/oceans-8.e87a548f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.18e3c833.js",
+    "static/js/runtime-main.bae1d50d.js",
     "static/js/2.e2fc4c1a.chunk.js",
     "static/css/main.85c44fdf.chunk.css",
-    "static/js/main.6e2f7ea3.chunk.js"
+    "static/js/main.eec5b6bc.chunk.js"
   ]
 }
